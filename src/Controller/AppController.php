@@ -27,31 +27,6 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
-    use \Crud\Controller\ControllerTrait;
-
-    /**
-    * components
-    */
-    public $components = [
-        'RequestHandler',
-        'Crud.Crud' => [
-            // API化対象アクション
-            'actions' => [
-                'Crud.Index',
-                'Crud.View',
-                'Crud.Add',
-                'Crud.Edit',
-                'Crud.Delete'
-            ],
-            // リスナー指定
-            'listeners' => [
-                'Crud.Api',
-                'Crud.ApiPagination',
-                'Crud.ApiQueryLog'
-            ]
-        ]
-    ];
-
     /**
      * Initialization hook method.
      *
@@ -65,8 +40,8 @@ class AppController extends Controller
     {
         parent::initialize();
 
-        $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('RequestHandler');
     }
 
     /**

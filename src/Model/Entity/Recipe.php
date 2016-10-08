@@ -31,4 +31,13 @@ class Recipe extends Entity
         '*' => true,
         'id' => false
     ];
+
+    public function index()
+    {
+        $recipes = $this->Recipes->find('all');
+        $this->set([
+            'recipes' => $recipes,
+            '_serialize' => ['recipes']
+        ]);
+    }
 }
