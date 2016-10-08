@@ -49,12 +49,13 @@ Router::scope('/', function (RouteBuilder $routes) {
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+//    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+//    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    $routes->resources('Recipes');
 
     /**
      * Connect catchall routes for all controllers.
@@ -74,6 +75,8 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->fallbacks(DashedRoute::class);
 });
+
+Router::extensions(['json']);
 
 /**
  * Load all plugin routes.  See the Plugin documentation on
