@@ -54,11 +54,11 @@ class RecipesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->integer('amount')
-            ->allowEmpty('amount');
+            ->allowEmpty('title');
 
         $validator
-            ->allowEmpty('img_url');
+            ->integer('amount')
+            ->allowEmpty('amount');
 
         $validator
             ->allowEmpty('order');
