@@ -12,8 +12,8 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('amount') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('img_url') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('updated_at') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -23,8 +23,8 @@
             <?php foreach ($recipes as $recipe): ?>
             <tr>
                 <td><?= $this->Number->format($recipe->id) ?></td>
+                <td><?= h($recipe->title) ?></td>
                 <td><?= $this->Number->format($recipe->amount) ?></td>
-                <td><?= h($recipe->img_url) ?></td>
                 <td><?= $this->Number->format($recipe->created_at) ?></td>
                 <td><?= $this->Number->format($recipe->updated_at) ?></td>
                 <td class="actions">

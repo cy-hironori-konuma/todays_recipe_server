@@ -13,18 +13,18 @@
     <h3><?= h($recipe->id) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Img Url') ?></th>
-            <td><?= h($recipe->img_url) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($recipe->id) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Title') ?></th>
+            <td><?= h($recipe->title) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Amount') ?></th>
             <td><?= $this->Number->format($recipe->amount) ?></td>
         </tr>
-        <tr>
+        <tr>Ï
             <th scope="row"><?= __('Created At') ?></th>
             <td><?= $this->Number->format($recipe->created_at) ?></td>
         </tr>
