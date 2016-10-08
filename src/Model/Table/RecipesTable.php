@@ -59,9 +59,9 @@ class RecipesTable extends Table
         $validator
             ->integer('amount')
             ->allowEmpty('amount');
-
+t,
         $validator
-            ->allowEmpty('order');
+            ->allowEmpty('description');
 
         $validator
             ->integer('created_at')

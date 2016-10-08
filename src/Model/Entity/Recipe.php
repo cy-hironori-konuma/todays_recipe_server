@@ -7,9 +7,9 @@ use Cake\ORM\Entity;
  * Recipe Entity
  *
  * @property int $id
+ * @property string $title 
  * @property int $amount
- * @property string $img_url
- * @property string $order
+ * @property string $description
  * @property int $created_at
  * @property int $updated_at
  *

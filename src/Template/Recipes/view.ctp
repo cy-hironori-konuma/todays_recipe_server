@@ -34,8 +34,8 @@
         </tr>
     </table>
     <div class="row">
-        <h4><?= __('Order') ?></h4>
-        <?= $this->Text->autoParagraph(h($recipe->order)); ?>
+        <h4><?= __('Description') ?></h4>
+        <?= $this->Text->autoParagraph(h($recipe->description)); ?>
     </div>
     <div class="related">
         <h4><?= __('Related Recipe Foods') ?></h4>

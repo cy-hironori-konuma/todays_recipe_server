@@ -13,7 +13,7 @@
         <?php
             echo $this->Form->input('title');
             echo $this->Form->input('amount');
-            echo $this->Form->input('order');
+            echo $this->Form->input('description');
             echo $this->Form->input('created_at');
             echo $this->Form->input('updated_at');
         ?>
