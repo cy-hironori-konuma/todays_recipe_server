@@ -18,8 +18,12 @@ class RecipesController extends AppController
      */
     public function index()
     {
-        $recipes = $this->paginate($this->Recipes);
-
+        $recipes = $this->Recipes->find('all', [
+            'contain' => [
+                'RecipeFoods',
+		'RecipeFoods.Foods'
+            ]
+        ]);
         $this->set(compact('recipes'));
         $this->set('_serialize', ['recipes']);
     }
